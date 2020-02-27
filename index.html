@@ -23,10 +23,10 @@
       <nav>
         <ul class="nav-menu">
           <li>
-            <a href="#">ABOUT</a>
-            <a href="#">SERVICES</a>
-            <a href="#">PORTFOLIO</a>
-            <a href="#">CONTACT</a>
+            <a class="nav-options" href="#">ABOUT</a>
+            <a class="nav-options" href="#">SERVICES</a>
+            <a class="nav-options" href="#">PORTFOLIO</a>
+            <a class="nav-options" href="#">CONTACT</a>
           </li>
         </ul>
       </nav>
@@ -44,9 +44,107 @@
           experiences.
         </h1>
       </section>
-      <section class="about"></section>
-      <section class="services"></section>
-      <section class="contact"></section>
+      <section class="about">
+        <h1>ABOUT US</h1>
+        <div class="about-container">
+          <p>
+            Estes-Garcia Consulting was founded in 2020 by a digital marketer
+            turned UX/UI designer and a web developer — the dream team. Founded
+            in San Antonio by San Antonians, we are proud to be locally grown
+            and to serve the great people of Texas.<br />
+            <br />
+            At Estes-Garcia Consulting, we help clients meet their goals through
+            incredible digital experiences. We also love to give back and
+            frequently provide nonprofits pro bono services.
+          </p>
+          <img src="images/alamo.png" />
+        </div>
+        <button>Learn More</button>
+      </section>
+      <section class="services">
+        <h1>SERVICES</h1>
+        <div class="container-flex">
+          <div class="services-container-1">
+            <img src="assetsicons/bullhorn.svg" />
+            <p class="services-blurb">
+              Digital Marketing <br />
+              and Strategy
+            </p>
+          </div>
+          <div class="services-container-2">
+            <img src="assetsicons/design.svg" />
+            <p class="services-blurb">
+              Application and <br />
+              Website Design
+            </p>
+          </div>
+          <div class="services-container-3">
+            <img src="assetsicons/redesign.svg" />
+            <p class="services-blurb">
+              Application and <br />
+              Website Redesign
+            </p>
+          </div>
+          <div class="services-container-4">
+            <img src="assetsicons/optimize (1).svg" />
+            <p class="services-blurb">
+              Application and <br />
+              Website Maintenance
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="contact">
+        <h1>LET’S WORK TOGETHER</h1>
+        <h2>
+          We are passionate about what we do and <br> know that together, we can make
+          something <br> amazing. Reach out and let’s begin!
+        </h2>
+        <form
+          action="mailto:brittany.estes.garcia@gmail.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <label for="name"></label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name*"
+            required
+          />
+
+          <label for="email address"></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email*"
+            required
+          />
+
+          <label for="subject"></label>
+          <textarea type="text" id="subject" name="subject" placeholder="Your Message*" required></textarea>
+      </textarea>
+          <input id="submit" type="submit" value="GET IN CONTACT" />
+        </form>
+      </section>
+      <footer>
+        <div class="up-icon">
+          <img src="assetsicons/up-arrow.svg" alt="up arrow" />
+        </div>
+        <div class="social-icons">
+          <img src="assetsicons/mail.svg" />
+          <img src="assetsicons/facebook.svg" />
+          <img src="assetsicons/linkedin (2).svg" />
+      </div>
+        <p>
+          Estes-Garcia Consulting
+          <span class="copyright"><img src="assetsicons/copyright.svg"/></span> 2020
+        </p>
+        <p>Design by Brittany Estes-Garcia</p>
+        <p>Code by Samira Estes-Garcia</p>
+      </footer>
     </main>
   </body>
 </html>

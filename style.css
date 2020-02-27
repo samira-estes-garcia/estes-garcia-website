@@ -52,13 +52,17 @@ body {
   font-size: 1.5em;
 }
 
+.nav-options:hover {
+  color: #0363a2;
+}
+
 .hero {
   position: relative;
 }
 
 .hero h1 {
   position: absolute;
-  top: 15%;
+  top: 10%;
   color: white;
   font-size: 5rem;
   font-family: "Roboto";
@@ -70,18 +74,255 @@ body {
   letter-spacing: 0.1rem;
 }
 
-/* .hero img {
-  width: 100%;
-  height: 15%;
+.about {
+  padding-bottom: 2%;
 }
 
-.hero h1 {
-  color: white;
+.about h1 {
+  font-family: "Roboto";
+  font-size: 3.5em;
+  font-weight: 500;
+  margin: 4%;
+  text-align: center;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 5%;
+}
+
+.about-container p {
+  font-family: "Roboto";
   font-size: 2em;
+  font-weight: 100;
+  line-height: 1.3em;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+
+.about-container img {
+  width: 40em;
+  height: 28em;
+  margin-top: 5%;
+  padding-left: 5%;
+}
+
+.about button {
+  margin-left: 38rem;
+  background-color: #0363a2;
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 3%;
+  padding-right: 3%;
+  margin-top: -100%;
+  border-radius: 0.2em;
+}
+
+.services {
+  background-color: #f3c38e;
+  padding-bottom: 5%;
+}
+
+.services h1 {
+  padding: 4%;
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 3.5em;
+  font-weight: 500;
+}
+
+.container-flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  min-height: 100%;
+  justify-content: center;
+}
+
+.container-flex > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 35%;
+  margin-top: -2%;
+}
+
+.container-flex > div > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  height: 50%;
+}
+
+.services-container-1,
+.services-container-2,
+.services-container-3,
+.services-container-4 {
+  margin: 5%;
+  background-color: white;
+  border-radius: 0.5%;
+}
+
+.services-container-1:hover,
+.services-container-2:hover,
+.services-container-3:hover,
+.services-container-4:hover {
+  box-shadow: 0 0 20px gray;
+  cursor: pointer;
+}
+
+.services-container-1 img,
+.services-container-2 img,
+.services-container-3 img,
+.services-container-4 img {
+  width: 45%;
+  margin: auto;
+}
+
+.services-container-1 p,
+.services-container-2 p,
+.services-container-3 p,
+.services-container-4 p {
+  font-family: "Roboto";
+  text-align: center;
+  font-weight: 500;
+  font-size: 2.1em;
+  margin-top: -2%;
+}
+
+.services-container-1 img {
+  padding: 15%;
+}
+
+.services-container-3 img {
+  width: 65%;
+}
+
+.services-container-1,
+.services-container-2 img,
+.services-container-4 img {
+  width: 50%;
+}
+
+.services-container-1,
+.services-container-3 {
+  margin-right: -2%;
+}
+
+.services-container-1 p {
   margin-top: -10%;
+}
+
+.contact {
+  padding-bottom: 10%;
+}
+
+.contact h1 {
+  padding-top: 3%;
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 3.5em;
+  font-weight: 500;
+}
+
+.contact h2 {
+  font-size: 1.5rem;
+  margin-bottom: 5%;
+  font-weight: 200;
+  letter-spacing: 0.05em;
+  text-align: center;
+  font-family: "Roboto";
+}
+
+.contact form {
+  background-color: #0363a2;
+  width: 50em;
+  display: flex;
+  flex-direction: column;
+  height: 30em;
+  margin: auto;
+  padding: 2rem 1rem 3rem;
+  border-radius: 0.2rem;
+}
+
+.contact label {
+  padding: 1rem 0 0.5rem;
+}
+
+.contact input {
+  padding: 2%;
+  margin: 0 auto;
+  width: 95%;
+}
+
+.contact ::placeholder {
+  color: gray;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+#subject {
+  min-height: 15rem;
+  padding: 2%;
+  margin: 0 auto;
+  width: 95%;
+}
+
+#submit {
+  width: 21%;
+  background-color: #f3c38e;
+  color: black;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 2% 3%;
+  margin-top: 2%;
+  border-radius: 0.1em;
+  border: 1px solid #f3c38e;
+}
+
+#submit:hover {
+  cursor: pointer;
+}
+
+footer {
+  background-color: #f3c38e;
+}
+
+.up-icon {
+  background-color: #0363a2;
+  width: 7%;
+}
+
+/* .social-icons object {
+  width: 10%;
+}
+
+.social-icons object:hover {
+  fill: white;
+  cursor: pointer;
 } */
 
-/* .hero {
-  background-image: url("images/hero-img.jpg");
-  margin-top: 4%;
-} */
+.social-icons img {
+  width: 10%;
+}
+
+.social-icons img:hover {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+.copyright img {
+  width: 2%;
+}
+
+/*
+gold
+#F3C38E
+
+blue
+#0363A2
+*/
