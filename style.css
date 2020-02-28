@@ -7,14 +7,20 @@ body {
   overflow-x: hidden;
 }
 
-/* header {
-  margin-top: 2%;
-} */
+/* fixed nav */
+header {
+  z-index: 9999;
+  top: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  background-color: white;
+}
 
 .logo {
   float: left;
   display: flex;
-  margin-top: -3.5%;
+  margin-top: -0.5%;
   margin-bottom: 1%;
   width: 30%;
 }
@@ -219,6 +225,7 @@ body {
 
 .contact {
   padding-bottom: 10%;
+  position: relative;
 }
 
 .contact h1 {
@@ -290,24 +297,34 @@ body {
 
 footer {
   background-color: #f3c38e;
+  position: relative;
+  padding-bottom: 2%;
 }
 
 .up-icon {
   background-color: #0363a2;
-  width: 7%;
-}
-
-/* .social-icons object {
-  width: 10%;
-}
-
-.social-icons object:hover {
-  fill: white;
+  width: 3%;
+  margin: auto;
+  padding: 1%;
+  right: 0;
+  left: 0;
+  top: -9%;
   cursor: pointer;
-} */
+  position: absolute;
+  border-radius: 0.2em;
+}
+
+.social-icons {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-right: 5%;
+}
 
 .social-icons img {
-  width: 10%;
+  width: 5;
+  margin-top: 6%;
+  margin-left: 5%;
 }
 
 .social-icons img:hover {
@@ -316,7 +333,25 @@ footer {
 }
 
 .copyright img {
-  width: 2%;
+  width: 1.5%;
+}
+
+.credits {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 3.5%;
+}
+
+.p-1 {
+  font-family: "Roboto";
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.p-2 {
+  font-family: "Roboto";
+  font-size: 1.1em;
+  line-height: 0.4em;
 }
 
 /*
