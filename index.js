@@ -9,22 +9,18 @@ $(".burger").on("click", () => {
 $(".hero").on("click", () => {
   $(".mobile-menu").removeClass("show");
 });
-
-// $(".about").on("click", () => {
-//   $(".mobile-menu").removeClass("show");
-// });
-
-// $(".services").on("click", () => {
-//   $(".mobile-menu").removeClass("show");
-// });
-
-// $(".contact").on("click", () => {
-//   $(".mobile-menu").removeClass("show");
-// });
-
-// $("footer").on("click", () => {
-//   $(".mobile-menu").removeClass("show");
-// });
+$(".about").on("click", () => {
+  $(".mobile-menu").removeClass("show");
+});
+$(".services").on("click", () => {
+  $(".mobile-menu").removeClass("show");
+});
+$(".contact").on("click", () => {
+  $(".mobile-menu").removeClass("show");
+});
+$("footer").on("click", () => {
+  $(".mobile-menu").removeClass("show");
+});
 
 //shrinking nav (desktop nav)
 $(document).on("scroll", function() {
@@ -45,3 +41,36 @@ if ($(window).width() <= 1000) {
     }
   });
 }
+
+//capture form info and send vals to email address
+$("#submit").click(function(event) {
+  event.preventDefault();
+  console.log("Submit was clicked");
+
+  let name = $("#name").val();
+  let email = $("#email").val();
+  let message = $("#message").val();
+  let status = $(".status");
+  status.empty();
+
+  if (name.length >= 5) {
+    status.append("<div>Name is valid</div>");
+  } else {
+    event.preventDefault();
+    status.append("<div>Name is not valid</div>");
+  }
+
+  if (email.length > 5 && email.includes("@") && email.includes(".")) {
+    status.append("<div>Email is valid</div>");
+  } else {
+    event.preventDefault();
+    status.append("<div>Email is not valid</div>");
+  }
+
+  if (message.length >= 10) {
+    status.append("<div>Message is valid</div>");
+  } else {
+    event.preventDefault();
+    status.append("<div>Message is not valid</div>");
+  }
+});

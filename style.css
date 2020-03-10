@@ -351,6 +351,8 @@ header.shrink-mobile .logo-img {
   margin-top: -10%;
 }
 
+/* contact styles */
+
 #contact {
   padding-bottom: 10%;
   position: relative;
@@ -375,6 +377,8 @@ header.shrink-mobile .logo-img {
   font-family: "Roboto";
 }
 
+/* contact form styles */
+
 #contact form {
   background-color: #0363a2;
   width: 50em;
@@ -397,7 +401,7 @@ header.shrink-mobile .logo-img {
   width: 95%;
 }
 
-#subject {
+#message {
   min-height: 15rem;
   padding: 2%;
   margin: 0 auto;

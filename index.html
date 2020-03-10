@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/jpg" href="images/eg-favicon.png" />
     <link
@@ -15,12 +16,12 @@
     <header>
       <div class="logo">
         <a href="index.html">
-        <img class="logo-img" src="images/eg-logo.png" alt="logo icon" />
-        <h1>
-          Estes-Garcia <br />
-          Consulting
-        </h1>
-      </a>
+          <img class="logo-img" src="images/eg-logo.png" alt="logo icon" />
+          <h1>
+            Estes-Garcia <br />
+            Consulting
+          </h1>
+        </a>
       </div>
       <nav class="main-nav">
         <ul class="nav-menu">
@@ -39,7 +40,7 @@
           <a class="mobile-options" href="#">SERVICES</a>
           <a class="mobile-options" href="#">PORTFOLIO</a>
           <a class="mobile-options" href="#">CONTACT</a>
-      </div>
+        </div>
       </nav>
     </header>
     <main>
@@ -108,14 +109,11 @@
       <section id="contact">
         <h1>LET’S WORK TOGETHER</h1>
         <h2>
-          We are passionate about what we do and <br> know that together, we can make
-          something <br> amazing. Reach out and let’s begin!
+          We are passionate about what we do and <br />
+          know that together, we can make something <br />
+          amazing. Reach out and let’s begin!
         </h2>
-        <form
-          action="contact-form-handler.php"
-          method="post"
-          enctype="text/plain"
-        >
+        <form action="https://formspree.io/moqwgnvp" method="POST">
           <label for="name"></label>
           <input
             type="text"
@@ -134,9 +132,16 @@
             required
           />
 
-          <label for="subject"></label>
-          <textarea type="text" id="subject" name="subject" placeholder="Your Message*" required></textarea>
-      </textarea>
+          <label for="message"></label>
+          <textarea
+            type="text"
+            id="message"
+            name="message"
+            placeholder="Your Message*"
+            required
+          ></textarea>
+          <div class="status message-status"></div>
+
           <input id="submit" type="submit" value="GET IN CONTACT" />
         </form>
       </section>
@@ -148,19 +153,20 @@
           <img class="mail" src="assetsicons/envelope.svg" />
           <img src="assetsicons/facebook.svg" />
           <img src="assetsicons/linkedin.svg" />
-      </div>
-      <div class="credits">
-        <p class="p-1">
-          Estes-Garcia Consulting
-          <span class="copyright"><img src="assetsicons/copyright.svg"/></span>2020
-        </p>
-        <p class="p-2">Design by Brittany Estes-Garcia</p>
-        <p class="p-2">Code by Samira Estes-Garcia</p>
-      </div>
+        </div>
+        <div class="credits">
+          <p class="p-1">
+            Estes-Garcia Consulting
+            <span class="copyright"><img src="assetsicons/copyright.svg"/></span
+            >2020
+          </p>
+          <p class="p-2">Design by Brittany Estes-Garcia</p>
+          <p class="p-2">Code by Samira Estes-Garcia</p>
+        </div>
       </footer>
     </main>
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
-  <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
