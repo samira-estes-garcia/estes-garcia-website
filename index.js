@@ -43,7 +43,7 @@ if ($(window).width() <= 1000) {
 }
 
 //capture form info and send vals to email address
-$("#submit").click(function(event) {
+$("#contact-form").submit(function(event) {
   event.preventDefault();
   console.log("Submit was clicked");
 
