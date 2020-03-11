@@ -42,35 +42,60 @@ if ($(window).width() <= 1000) {
   });
 }
 
+//click outside of success-modal to close the popup
+function closeSuccessModal() {
+  $("body").on("click", () => {
+    $(".success-modal").css("display", "none");
+  });
+}
+
 //capture form info and send vals to email address
-$("#contact-form").submit(function(event) {
-  event.preventDefault();
-  console.log("Submit was clicked");
-
-  let name = $("#name").val();
-  let email = $("#email").val();
-  let message = $("#message").val();
-  let status = $(".status");
-  status.empty();
-
-  if (name.length >= 5) {
-    status.append("<div>Name is valid</div>");
-  } else {
-    event.preventDefault();
-    status.append("<div>Name is not valid</div>");
-  }
-
-  if (email.length > 5 && email.includes("@") && email.includes(".")) {
-    status.append("<div>Email is valid</div>");
-  } else {
-    event.preventDefault();
-    status.append("<div>Email is not valid</div>");
-  }
-
-  if (message.length >= 10) {
-    status.append("<div>Message is valid</div>");
-  } else {
-    event.preventDefault();
-    status.append("<div>Message is not valid</div>");
-  }
+let $contactForm = $("#contact-form");
+$contactForm.submit(function(e) {
+  e.preventDefault();
+  $.ajax({
+    url: "https://formspree.io/moqwgnvp",
+    method: "POST",
+    data: $(this).serialize(),
+    dataType: "json",
+    beforeSend: function() {
+      $contactForm.append(
+        '<div class="alert alert--loading">Sending message…</div>'
+      );
+    },
+    success: function(data) {
+      $contactForm.find(".alert--loading").hide();
+      $contactForm.append(
+        '<div class="success-modal animated fadeIn"><img src="assetsicons/success-img.svg" alt="You successfully submitted the form!" /></div>'
+      );
+      closeSuccessModal();
+      $contactForm.trigger("reset");
+    },
+    error: function(err) {
+      $contactForm.find(".alert--loading").hide();
+      $contactForm.append(
+        '<div class="error-modal"><div class="modal-content error-modal-content">ERROR! Oops, there was an error.</div><div class="close">x image</div></div>'
+      );
+    }
+  });
 });
+
+// $("#contact-form").submit(function(e) {
+//   e.preventDefault();
+
+//   $.ajax({
+//     url: "https://formspree.io/moqwgnvp",
+//     method: "POST",
+//     data: { message: $("form").serialize() },
+//     dataType: "json"
+//   }).done(function(response) {
+//     $(".success").addClass("expand");
+//     $("#contact-form")
+//       .find("input[type=text], input[type=email], textarea")
+//       .val("");
+//   });
+// });
+
+// $("#close").click(function() {
+//   $("#success").removeClass("expand");
+// });

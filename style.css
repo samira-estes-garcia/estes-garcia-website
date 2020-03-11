@@ -430,6 +430,59 @@ header.shrink-mobile .logo-img {
   cursor: pointer;
 }
 
+.success-modal {
+  position: absolute;
+  top: 30em;
+  left: 30em;
+}
+
+.success-modal img {
+  border: 1px solid black;
+  box-shadow: 1px 1px 1px 1px black;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.animated {
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.error-modal {
+  width: 30%;
+  height: 30%;
+  position: absolute;
+  top: 30em;
+  left: 30em;
+  border: 2px solid black;
+  display: none;
+}
+
 footer {
   background-color: #f3c38e;
   position: relative;
