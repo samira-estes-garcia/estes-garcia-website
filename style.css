@@ -130,6 +130,10 @@ header.shrink-mobile .logo-img {
   display: flex !important;
 }
 
+.hide {
+  display: flex !important;
+}
+
 .burger {
   filter: invert(1);
   cursor: pointer;
@@ -155,6 +159,7 @@ header.shrink-mobile .logo-img {
   margin-top: 60px;
   z-index: 99;
   padding-top: 5%;
+  border-bottom: 1px solid #262626;
 }
 
 .mobile-menu a {
@@ -216,7 +221,7 @@ header.shrink-mobile .logo-img {
 
 .about-container p {
   font-family: "Roboto";
-  font-size: 2em;
+  font-size: 2vw;
   font-weight: 100;
   line-height: 1.3em;
   letter-spacing: 0.01em;
@@ -225,9 +230,8 @@ header.shrink-mobile .logo-img {
 }
 
 .about-container img {
-  width: 40em;
-  height: 28em;
-  margin-top: 5%;
+  width: 42vw;
+  margin-top: 2%;
   padding-left: 5%;
 }
 
@@ -588,6 +592,16 @@ footer {
   .nav-menu li {
     margin-left: 43rem;
   }
+
+  header.shrink .nav-menu {
+    margin-left: -7rem;
+  }
+}
+
+@media screen and (max-width: 1380px) {
+  header.shrink .nav-menu {
+    margin-left: -12rem;
+  }
 }
 
 @media screen and (max-width: 1300px) {
@@ -598,17 +612,41 @@ footer {
   .nav-menu li > a {
     font-size: 1.3em;
   }
+
+  header.shrink .nav-menu {
+    margin-left: -13rem;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  header.shrink .nav-menu {
+    margin-left: -15rem;
+  }
 }
 
 @media screen and (max-width: 1200px) {
   .nav-menu li {
     margin-left: 35rem;
   }
+
+  header.shrink .nav-menu {
+    margin-left: -17rem;
+  }
+}
+
+@media screen and (max-width: 1185px) {
+  header.shrink .nav-menu {
+    margin-left: -20rem;
+  }
 }
 
 @media screen and (max-width: 1100px) {
   .nav-menu li {
     margin-left: 30rem;
+  }
+
+  header.shrink .nav-menu {
+    margin-left: -28rem;
   }
 }
 
@@ -621,8 +659,9 @@ footer {
     margin: none;
     font-size: 4.7rem;
   }
-  .about-container p {
-    font-size: 1em;
+
+  header.shrink-mobile {
+    display: show;
   }
 }
 

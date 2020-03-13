@@ -9,25 +9,31 @@ $(".burger").on("click", () => {
 $(".hero").on("click", () => {
   $(".mobile-menu").removeClass("show");
 });
-$(".about").on("click", () => {
+$("#about").on("click", () => {
   $(".mobile-menu").removeClass("show");
 });
-$(".services").on("click", () => {
+$("#services").on("click", () => {
   $(".mobile-menu").removeClass("show");
 });
-$(".contact").on("click", () => {
+$("#contact").on("click", () => {
   $(".mobile-menu").removeClass("show");
 });
 $("footer").on("click", () => {
   $(".mobile-menu").removeClass("show");
 });
 
+//close .mobile-menu when menu option is clicked
+$(".mobile-options").on("click", () => {
+  $(".mobile-menu").removeClass("show");
+});
+
 //shrinking nav (desktop nav)
 $(document).on("scroll", function() {
   if ($(document).scrollTop() > 350) {
-    $("header").addClass("shrink");
+    $("header").addClass("shrink") && $("header").addClass("shrink-mobile");
   } else {
-    $("header").removeClass("shrink");
+    $("header").removeClass("shrink") &&
+      $("header").removeClass("shrink-mobile");
   }
 });
 
@@ -79,23 +85,3 @@ $contactForm.submit(function(e) {
     }
   });
 });
-
-// $("#contact-form").submit(function(e) {
-//   e.preventDefault();
-
-//   $.ajax({
-//     url: "https://formspree.io/moqwgnvp",
-//     method: "POST",
-//     data: { message: $("form").serialize() },
-//     dataType: "json"
-//   }).done(function(response) {
-//     $(".success").addClass("expand");
-//     $("#contact-form")
-//       .find("input[type=text], input[type=email], textarea")
-//       .val("");
-//   });
-// });
-
-// $("#close").click(function() {
-//   $("#success").removeClass("expand");
-// });
