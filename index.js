@@ -28,7 +28,7 @@ $(".mobile-options").on("click", () => {
 });
 
 //shrinking nav (desktop nav)
-$(document).on("scroll", function() {
+$(document).on("scroll", function () {
   if ($(document).scrollTop() > 350) {
     $("header").addClass("shrink") && $("header").addClass("shrink-mobile");
   } else {
@@ -39,7 +39,7 @@ $(document).on("scroll", function() {
 
 //shrinking nav (mobile nav)
 if ($(window).width() <= 1000) {
-  $(document).on("scroll", function() {
+  $(document).on("scroll", function () {
     if ($(document).scrollTop() > 350) {
       $("header").addClass("shrink-mobile");
     } else {
@@ -57,19 +57,19 @@ function closeSuccessModal() {
 
 //capture form info and send vals to email address
 let $contactForm = $("#contact-form");
-$contactForm.submit(function(e) {
+$contactForm.submit(function (e) {
   e.preventDefault();
   $.ajax({
     url: "https://formspree.io/moqwgnvp",
     method: "POST",
     data: $(this).serialize(),
     dataType: "json",
-    beforeSend: function() {
+    beforeSend: function () {
       $contactForm.append(
         '<div class="alert alert--loading">Sending message…</div>'
       );
     },
-    success: function(data) {
+    success: function (data) {
       $contactForm.find(".alert--loading").hide();
       $contactForm.append(
         '<div class="success-modal animated fadeIn"><img src="assetsicons/success-img.svg" alt="You successfully submitted the form!" /></div>'
@@ -77,11 +77,16 @@ $contactForm.submit(function(e) {
       closeSuccessModal();
       $contactForm.trigger("reset");
     },
-    error: function(err) {
+    error: function (err) {
       $contactForm.find(".alert--loading").hide();
       $contactForm.append(
         '<div class="error-modal"><div class="modal-content error-modal-content">ERROR! Oops, there was an error.</div><div class="close">x image</div></div>'
       );
-    }
+    },
   });
+});
+
+//scroll to top
+$(".up-icon").click(function () {
+  $("html, body").animate({ scrollTop: 0 }, "1000");
 });

@@ -1,10 +1,12 @@
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 
 /* fixed nav shrink on scroll */
@@ -31,8 +33,9 @@ header.shrink .logo {
 }
 
 header.shrink h1 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 400;
+  margin-top: 7%;
 }
 
 header.shrink nav {
@@ -40,8 +43,8 @@ header.shrink nav {
 }
 
 header.shrink img {
-  width: 15%;
-  height: 15%;
+  width: 4.5em;
+  height: 4.5em;
 }
 
 header.shrink .nav-menu li {
@@ -60,12 +63,12 @@ header.shrink-mobile img {
 }
 
 header.shrink-mobile .burger {
-  margin-top: -1%;
+  margin-top: -2rem;
 }
 
 header.shrink-mobile .logo-img {
-  width: 20%;
-  height: 20%;
+  width: 4.5em;
+  height: 4.5em;
   margin-top: 0.5%;
 }
 
@@ -134,11 +137,15 @@ header.shrink-mobile .logo-img {
   display: flex !important;
 }
 
+.drop-down {
+  display: none;
+}
+
 .burger {
   filter: invert(1);
   cursor: pointer;
   margin-right: 5rem;
-  margin-top: 4rem;
+  margin-top: 2rem;
   float: right;
 }
 
@@ -198,7 +205,7 @@ header.shrink-mobile .logo-img {
 /* about style */
 
 #about {
-  padding-bottom: 10%;
+  padding-bottom: 15%;
   padding-top: 50px;
   margin-top: -50px;
 }
@@ -221,7 +228,7 @@ header.shrink-mobile .logo-img {
 
 .about-container p {
   font-family: "Roboto";
-  font-size: 2vw;
+  font-size: 2em;
   font-weight: 100;
   line-height: 1.3em;
   letter-spacing: 0.01em;
@@ -235,18 +242,18 @@ header.shrink-mobile .logo-img {
   padding-left: 5%;
 }
 
+.about-button {
+  text-align: center;
+}
+
 .learn-more {
-  margin-left: 33rem;
   background-color: #0363a2;
-  color: white;
   font-size: 2rem;
   font-weight: 600;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  padding-left: 4%;
-  padding-right: 4%;
-  margin-top: -100%;
+  padding: 1% 4%;
   border-radius: 0.2em;
+  color: white;
+  margin-top: 3%;
 }
 
 .learn-more:hover {
@@ -265,7 +272,7 @@ header.shrink-mobile .logo-img {
 
 #services h1 {
   margin-bottom: 7%;
-  margin-top: 1%;
+  margin-top: -2%;
   text-align: center;
   font-family: "Roboto";
   font-size: 3.5em;
@@ -403,6 +410,7 @@ header.shrink-mobile .logo-img {
   padding: 2%;
   margin: 0 auto;
   width: 95%;
+  font-family: "Roboto";
 }
 
 #message {
@@ -410,6 +418,7 @@ header.shrink-mobile .logo-img {
   padding: 2%;
   margin: 0 auto;
   width: 95%;
+  font-family: "Roboto";
 }
 
 #contact ::placeholder {
@@ -435,15 +444,21 @@ header.shrink-mobile .logo-img {
 }
 
 .success-modal {
-  position: absolute;
-  top: 30em;
-  left: 30em;
+  text-align: center;
+  margin-top: -60%;
+  font-family: "Roboto";
+  font-weight: 400;
+  display: none;
 }
 
 .success-modal img {
   border: 1px solid black;
   box-shadow: 1px 1px 1px 1px black;
 }
+
+/* .close-icon {
+  width: 10%;
+} */
 
 @-webkit-keyframes fadeIn {
   from {
@@ -498,30 +513,59 @@ footer {
   width: 3%;
   margin: auto;
   padding: 1%;
-  right: 0;
-  left: 0;
+  right: 2%;
+  left: 3%;
   top: -9%;
   cursor: pointer;
   position: absolute;
   border-radius: 0.2em;
 }
 
+.up-icon img {
+  width: 100%;
+}
+
 .social-icons {
   text-align: center;
-  display: flex;
   justify-content: center;
-  margin-right: 5%;
 }
 
 .social-icons img {
-  width: 5;
-  margin-top: 6%;
+  margin-top: 5%;
   margin-left: 5%;
 }
 
 .social-icons img:hover {
   filter: invert(1);
   cursor: pointer;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: auto;
+  padding: 0.5rem;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 0.5rem;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  margin-left: -120px;
+  font-family: "Roboto";
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+#facebook:hover {
+  cursor: not-allowed;
 }
 
 .copyright img {
@@ -544,6 +588,14 @@ footer {
   font-family: "Roboto";
   font-size: 1.1em;
   line-height: 0.4em;
+}
+
+.p-2 a {
+  color: black;
+}
+
+.p-2:hover {
+  cursor: pointer;
 }
 
 /*animations*/
@@ -596,11 +648,28 @@ footer {
   header.shrink .nav-menu {
     margin-left: -7rem;
   }
+
+  .about-container img {
+    width: 38vw;
+  }
 }
 
 @media screen and (max-width: 1380px) {
   header.shrink .nav-menu {
     margin-left: -12rem;
+  }
+
+  .about-container img {
+    width: 34vw;
+  }
+
+  .about-container p {
+    font-size: 1.7em;
+  }
+
+  .learn-more {
+    /* padding: 0.5% 2%; */
+    font-size: 1.8rem;
   }
 }
 
@@ -622,6 +691,10 @@ footer {
   header.shrink .nav-menu {
     margin-left: -15rem;
   }
+
+  .about-container p {
+    font-size: 1.5em;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -637,6 +710,34 @@ footer {
 @media screen and (max-width: 1185px) {
   header.shrink .nav-menu {
     margin-left: -20rem;
+  }
+  #about {
+    padding-bottom: 15%;
+  }
+}
+
+@media screen and (max-width: 1125px) {
+  .logo h1 {
+    font-size: 1.8rem;
+  }
+  .about-container {
+    flex-direction: column-reverse;
+  }
+  .about-container img,
+  .about-container p {
+    margin: 0 auto;
+    margin-top: 5%;
+  }
+
+  .about-container p {
+    font-size: 1.8em;
+    width: 75vw;
+    text-align: center;
+  }
+
+  .about-container img {
+    width: 65vw;
+    padding-left: 0;
   }
 }
 
@@ -654,6 +755,11 @@ footer {
   .main-nav {
     display: none;
   }
+
+  .drop-down {
+    display: block;
+  }
+
   .hero h1 {
     text-align: center;
     margin: none;
@@ -663,43 +769,192 @@ footer {
   header.shrink-mobile {
     display: show;
   }
-}
 
-@media screen and (max-width: 800px) {
+  .services-container-1,
+  .services-container-2,
+  .services-container-3,
+  .services-container-4 {
+    margin: 0 auto;
+    text-align: center;
+    width: 55%;
+    flex-direction: column;
+    margin-bottom: 5%;
+  }
+
+  @media screen and (max-width: 930px) {
+    .logo h1 {
+      font-size: 1.6rem;
+      margin-top: 8%;
+    }
+
+    .learn-more {
+      font-size: 1.6rem;
+    }
+
+    #services h1 {
+      margin-top: -5%;
+    }
+
+    .services-container-4 {
+      margin-top: 1%;
+    }
+
+    #contact form {
+      width: 45em;
+    }
+  }
+
+  @media screen and (max-width: 860px) {
+    #about {
+      padding-bottom: 20%;
+    }
+    .logo {
+      width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .hero h1 {
+      font-size: 4.5rem;
+    }
+    .logo h1 {
+      font-size: 1.4rem;
+    }
+    .container-flex {
+      flex-direction: column;
+    }
+    .container-flex > div {
+      width: 55%;
+      padding: 1%;
+      margin-bottom: 10%;
+    }
+    .services-container-1 img {
+      margin-top: -2%;
+      width: 50%;
+    }
+    .services-container-2 img,
+    .services-container-4 img {
+      margin-top: 2%;
+    }
+    #contact form {
+      width: 40em;
+    }
+    #submit {
+      width: 35%;
+    }
+  }
+
+  @media screen and (max-width: 725px) {
+    #about {
+      padding-bottom: 25%;
+    }
+    #services h1 {
+      margin-top: -10%;
+    }
+    #contact h1 {
+      font-size: 3em;
+    }
+    #contact form {
+      width: 35em;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .hero h1 {
+      font-size: 4em;
+    }
+    #contact form {
+      width: 30em;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .hero h1 {
+      margin-left: 1%;
+    }
+    #contact ::placeholder {
+      font-size: 1.5em;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .hero h1 {
+      font-size: 3.5rem;
+    }
+
+    #about {
+      padding-bottom: 30%;
+    }
+    #contact form {
+      width: 25em;
+    }
+  }
+
+  @media screen and (max-width: 470px) {
+    .hero h1 {
+      font-size: 3.4rem;
+    }
+  }
+
+  @media screen and (max-width: 410px) {
+  .logo img {
+      width: 3.5em;
+      height: 3.5em;
+  }
+  .logo h1 {
+    font-size: 1.2em;
+  }
+  .burger img{
+    width: 175%;
+    margin-left: 200%;
+  }
   .hero h1 {
-    font-size: 4.5rem;
+    font-size: 2.8em;
+  }
+  header.shrink {
+    margin: -4em 0;
+  }
+  header.shrink .logo {
+    margin-top: 4em;
+  }
+  header.shrink-mobile .logo img {
+    width: 3.5em;
+    height: 3.5em;
+  }
+  header.shrink h1 {
+    font-size: 1em;
+  }
+  header.shrink .burger img {
+    width: 150%;
+  }
+  #contact h1 {
+    font-size: 2.2em;
+  }
+  #contact h2 {
+    font-size: .9em;
+    margin-top: -1em;
+  }
+  #contact form {
+    width: 17em;
+    height: 18em;
+  }
+  #contact ::placeholder {
+    font-size: 1em;
+  }
+  #name, #email {
+    margin-top: -2em;
+  }
+  #name {
+    margin-bottom: 2em;
+  }
+  #message {
+    min-height: 12em;
+  }
+  #submit {
+    margin-top: 1em;
+    width: 50%;
   }
 }
-
-@media screen and (max-width: 500px) {
-  .hero h1 {
-    font-size: 4rem;
-  }
-}
-
-@media screen and (max-width: 470px) {
-  .hero h1 {
-    font-size: 3.8rem;
-  }
-}
-
-@media screen and (max-width: 410px) {
-  .hero h1 {
-    font-size: 3rem;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .drop-down {
-    display: none;
-  }
-}
-
-/* @media screen and (max-width: 410px) {
-  .hero h1 {
-    font-size: 3.5rem;
-  }
-} */
 
 /*
 gold
