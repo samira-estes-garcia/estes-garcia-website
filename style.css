@@ -63,7 +63,7 @@ header.shrink-mobile img {
 }
 
 header.shrink-mobile .burger {
-  margin-top: -2rem;
+  margin-top: -.5rem;
 }
 
 header.shrink-mobile .logo-img {
@@ -437,6 +437,7 @@ header.shrink-mobile .logo-img {
   margin: 2% auto;
   border-radius: 0.1em;
   border: 1px solid #f3c38e;
+  -webkit-appearance: none;
 }
 
 #submit:hover {
@@ -455,10 +456,6 @@ header.shrink-mobile .logo-img {
   border: 1px solid black;
   box-shadow: 1px 1px 1px 1px black;
 }
-
-/* .close-icon {
-  width: 10%;
-} */
 
 @-webkit-keyframes fadeIn {
   from {
@@ -668,7 +665,6 @@ footer {
   }
 
   .learn-more {
-    /* padding: 0.5% 2%; */
     font-size: 1.8rem;
   }
 }
@@ -909,7 +905,8 @@ footer {
     margin-left: 200%;
   }
   .hero h1 {
-    font-size: 2.8em;
+    font-size: 3.3em;
+    margin-top: -3%;
   }
   header.shrink {
     margin: -4em 0;
@@ -926,6 +923,22 @@ footer {
   }
   header.shrink .burger img {
     width: 150%;
+  }
+  #about h1 {
+    font-size: 2.5em;
+  }
+  .about-container p {
+    font-size: 1.2em;
+    text-align: justify;
+  }
+  .learn-more {
+    font-size: 1.3em;
+  }
+  #services h1 {
+    font-size: 2.5em;
+  }
+  .services-container-1 p, .services-container-2 p, .services-container-3 p, .services-container-4 p {
+    font-size: 1.2em;
   }
   #contact h1 {
     font-size: 2.2em;
@@ -953,6 +966,25 @@ footer {
   #submit {
     margin-top: 1em;
     width: 50%;
+  }
+  .social-icons {
+    padding-top: 8%;
+  }
+  .up-icon {
+    width: 5%;
+    top: -7%
+  }
+  #facebook, .linkedin{
+    width: 8vw;
+  }
+  .mail{
+    width: 9vw;
+  }
+  .p-1 {
+    font-size: .8em;
+  }
+  .p-2 {
+    font-size: .5em;
   }
 }
 
