@@ -71,9 +71,10 @@ $contactForm.submit(function (e) {
     },
     success: function (data) {
       $contactForm.find(".alert--loading").hide();
-      $contactForm.append(
-        '<div class="success-modal animated fadeIn"><img src="assetsicons/success-img.svg" alt="You successfully submitted the form!" /></div>'
-      );
+      // $contactForm.append(
+      //   '<div class="success-modal animated fadeIn"><img src="assetsicons/success-img.svg" alt="You successfully submitted the form!" /></div>'
+      // );
+      $(".success-modal").show();
       closeSuccessModal();
       $contactForm.trigger("reset");
     },

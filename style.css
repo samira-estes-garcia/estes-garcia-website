@@ -188,6 +188,10 @@ header.shrink-mobile .logo-img {
   position: relative;
 }
 
+.hero-img{
+  filter: saturate(1.3);
+}
+
 .hero h1 {
   position: absolute;
   top: 16%;
@@ -197,7 +201,6 @@ header.shrink-mobile .logo-img {
   width: 100%;
   text-align: right;
   margin-left: -3.5%;
-  line-height: 1.3em;
   font-weight: 400;
   letter-spacing: 0.1rem;
 }
@@ -248,9 +251,9 @@ header.shrink-mobile .logo-img {
 
 .learn-more {
   background-color: #0363a2;
-  font-size: 2rem;
+  font-size: 2vw;
   font-weight: 600;
-  padding: 1% 4%;
+  padding: 1% 2%;
   border-radius: 0.2em;
   color: white;
   margin-top: 3%;
@@ -309,7 +312,7 @@ header.shrink-mobile .logo-img {
 .services-container-4 {
   margin: 5%;
   background-color: white;
-  border-radius: 0.5%;
+  border-radius: 1%;
 }
 
 .services-container-1:hover,
@@ -324,7 +327,6 @@ header.shrink-mobile .logo-img {
 .services-container-2 img,
 .services-container-3 img,
 .services-container-4 img {
-  width: 45%;
   margin: auto;
 }
 
@@ -334,8 +336,7 @@ header.shrink-mobile .logo-img {
 .services-container-4 p {
   font-family: "Roboto";
   text-align: center;
-  font-weight: 500;
-  font-size: 2.1em;
+  font-size: 2em;
   margin-top: -2%;
 }
 
@@ -347,7 +348,7 @@ header.shrink-mobile .logo-img {
   width: 65%;
 }
 
-.services-container-1,
+.services-container-1 img,
 .services-container-2 img,
 .services-container-4 img {
   width: 50%;
@@ -397,8 +398,8 @@ header.shrink-mobile .logo-img {
   flex-direction: column;
   height: 30em;
   margin: auto;
-  padding: 2rem 1rem 3rem;
-  border-radius: 0.2rem;
+  padding: 2rem 2rem 5rem;
+  border-radius: 0.3rem;
 }
 
 #contact label {
@@ -428,14 +429,14 @@ header.shrink-mobile .logo-img {
 }
 
 #submit {
-  width: 21%;
+  width: 25%;
   background-color: #f3c38e;
   color: black;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 600;
-  padding: 2% 3%;
-  margin: 2% auto;
-  border-radius: 0.1em;
+  padding: 2% 2.5%;
+  margin: 4% auto;
+  border-radius: 0.3em;
   border: 1px solid #f3c38e;
   -webkit-appearance: none;
 }
@@ -445,10 +446,8 @@ header.shrink-mobile .logo-img {
 }
 
 .success-modal {
-  text-align: center;
+  margin: 0 auto;
   margin-top: -60%;
-  font-family: "Roboto";
-  font-weight: 400;
   display: none;
 }
 
@@ -489,6 +488,7 @@ header.shrink-mobile .logo-img {
   animation-fill-mode: both;
 }
 
+/*Will include when I update the site
 .error-modal {
   width: 30%;
   height: 30%;
@@ -498,6 +498,9 @@ header.shrink-mobile .logo-img {
   border: 2px solid black;
   display: none;
 }
+*/
+
+/*footer styles*/
 
 footer {
   background-color: #f3c38e;
@@ -589,10 +592,12 @@ footer {
 
 .p-2 a {
   color: black;
+  text-decoration: none;
 }
 
-.p-2:hover {
+.p-2 a:hover {
   cursor: pointer;
+  color: white;
 }
 
 /*animations*/
@@ -838,6 +843,9 @@ footer {
     #submit {
       width: 35%;
     }
+    .success-modal {
+      margin-top: -75%
+    }
   }
 
   @media screen and (max-width: 725px) {
@@ -862,6 +870,10 @@ footer {
     #contact form {
       width: 30em;
     }
+    .success-modal {
+      margin-top: -80%;
+      margin-left: -2%;
+    }
   }
 
   @media screen and (max-width: 600px) {
@@ -884,6 +896,12 @@ footer {
     #contact form {
       width: 25em;
     }
+    .success-modal {
+      margin-left: 6%;
+    }
+    .success-modal img {
+      width: 75vw
+    }
   }
 
   @media screen and (max-width: 470px) {
@@ -892,7 +910,7 @@ footer {
     }
   }
 
-  @media screen and (max-width: 410px) {
+  @media screen and (max-width: 414px) {
   .logo img {
       width: 3.5em;
       height: 3.5em;
@@ -967,6 +985,10 @@ footer {
     margin-top: 1em;
     width: 50%;
     padding: 3% 3%;
+  }
+  .success-modal {
+    margin-top: -100%;
+    margin-left: -4%;
   }
   .social-icons {
     padding-top: 8%;
