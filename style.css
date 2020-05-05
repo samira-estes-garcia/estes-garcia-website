@@ -860,7 +860,7 @@ footer {
       margin-top: -75%
     }
     .up-icon {
-      width: 5%;
+      display: none;
     }
   }
 
@@ -982,12 +982,11 @@ footer {
     text-align: justify;
   }
   .learn-more {
-    font-size: 1.3em;
-    margin-bottom: 10%;
+    font-size: 1em;
+    margin-bottom: 5%;
   }
   #services h1 {
     font-size: 2.5em;
-    margin-top: -15%;
   }
   .services-container-1 p, .services-container-2 p, .services-container-3 p, .services-container-4 p {
     font-size: 1.2em;
