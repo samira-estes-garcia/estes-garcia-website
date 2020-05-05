@@ -1020,6 +1020,7 @@ footer {
   #submit {
     margin-top: 3.5em;
     font-size: .5em;
+    line-height: 2em;
   }
   .success-modal {
     margin-top: -100%;
