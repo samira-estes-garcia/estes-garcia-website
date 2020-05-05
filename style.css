@@ -987,13 +987,13 @@ footer {
   }
   #services h1 {
     font-size: 2.5em;
+    margin-top: -15%;
   }
   .services-container-1 p, .services-container-2 p, .services-container-3 p, .services-container-4 p {
     font-size: 1.2em;
   }
   #contact h1 {
     font-size: 2.2em;
-    margin-top: -15%;
   }
   #contact h2 {
     font-size: .9em;
@@ -1018,7 +1018,6 @@ footer {
   }
   #submit {
     margin-top: 3.5em;
-    width: 40%;
     font-size: .3em;
   }
   .success-modal {
