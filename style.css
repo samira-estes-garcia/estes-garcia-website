@@ -987,6 +987,8 @@ footer {
   }
   #services h1 {
     font-size: 2.5em;
+    margin-top: -15%;
+    margin-bottom: 10%;
   }
   .services-container-1 p, .services-container-2 p, .services-container-3 p, .services-container-4 p {
     font-size: 1.2em;
@@ -1017,7 +1019,7 @@ footer {
   }
   #submit {
     margin-top: 3.5em;
-    font-size: .3em;
+    font-size: .5em;
   }
   .success-modal {
     margin-top: -100%;
@@ -1025,10 +1027,6 @@ footer {
   }
   .social-icons {
     padding-top: 8%;
-  }
-  .up-icon {
-    width: 5%;
-    top: -7%
   }
   #facebook, .linkedin{
     width: 8vw;
